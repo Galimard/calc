@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="#" class="calculation">
+    <fieldset>
+        <h2>Расчёт стоимости и сроков доставки сборным грузом или выделенным транспортом</h2>
+        <div class="calculation-box">
+            <div class="calculation-item">
+                <div class="calculation-item-block">
+                    <label>Откуда</label>
+                    <?php /*input type="text" name="cityOf" value="Иркутск" class="city-search"*/?>
+                    <select name="cityOf" class="city-search" disabled="">
+                        <option value="Иркутск" selected="" disabled="">Иркутск</option>
+                    </select>
+                </div>
+                <div class="calculation-item-block">
+                    <label>Куда</label>
+                    <select id="v" class="city-search ui-autocomplete-input city-to-go">
+                        <option id="1" value="120" data-min="2400">Абакан</option>
+                        <option id="2" value="85"  data-min="2125">Анапа</option>
+                        <option id="3" value="85" data-min="2125">Астрахань</option>
+                        <option id="4" value="80" data-min="2000">Архангельск</option>
+                        <option id="5" value="100" data-min="110">Бодайбо</option>
+                        <option id="6" value="115" data-min="2875">Барнаул</option>
+                        <option id="7" value="50" data-min="500">Братск</option>
+                        <option id="8" value="65" data-min="650">Благовещенск</option>
+                        <option id="9" value="90" data-min="2250">Волгоград</option>
+                        <option id="10" value="90" data-min="2250">Воронеж</option>
+                        <option id="11" value="70" data-min="1875">Владивосток</option>
+                        <option id="12" value="80" data-min="2000">Владикавказ</option>
+                        <option id="13" value="115" data-min="1150">Ербогачен</option>
+                        <option id="14" value="55" data-min="1375">Екатеринбург</option>
+                        <option id="15" value="100" data-min="1000">Киренск</option>
+                        <option id="16" value="110" data-min="2750">Калининград</option>
+                        <option id="17" value="45" data-min="450">Красноярск</option>
+                        <option id="18" value="150" data-min="3625">Кемерово</option>
+                        <option id="19" value="90" data-min="2250">Казань</option>
+                        <option id="20" value="85" data-min="2125">Краснодар</option>
+                        <option id="21" value="120" data-min="2750">Караганда</option>
+                        <option id="22" value="60" data-min="600">Кызыл</option>
+                        <option id="23" value="115" data-min="115">Ленск</option>
+                        <option id="24" value="85" data-min="2125">Магнитогорск</option>
+                        <option id="25" value="85" data-min="2125">Махачкала</option>
+                        <option id="26" value="175" data-min="1750">Магадан</option>
+                        <option id="27" value="55" data-min="1375">Москва( Дом.)</option>
+                        <option id="28" value="0" data-min="0">Москва( Внук.)</option>
+                        <option id="29" value="65" data-min="1750">Москва( Шер.)</option>
+                        <option id="30" value="117" data-min="1170">Мама</option>
+                        <option id="31" value="115" data-min="1725">Мирный</option>
+                        <option id="32" value="90" data-min="2250">Мин. Воды</option>
+                        <option id="33" value="95" data-min="2250">Мурманск</option>
+                        <option id="34" value="70" data-min="1875">Наб. Челны</option>
+                        <option id="35" value="100" data-min="2500">Надым</option>
+                        <option id="36" value="75" data-min="750">Нерюнгри</option>
+                        <option id="37" value="85" data-min="1625">Нижнекамск</option>
+                        <option id="38" value="50" data-min="500">Новосибирск</option>
+                        <option id="39" value="120" data-min="2400">Новокузнецк</option>
+                        <option id="40" value="85" data-min="2125">Ниж. Новгород</option>
+                        <option id="41" value="120" data-min="2750">Нов. Уренгой</option>
+                        <option id="42" value="220" data-min="4400">Норильск</option>
+                        <option id="43" value="120" data-min="3000">Нижневартовск</option>
+                        <option id="44" value="65" data-min="600">Нижнеангарск</option>
+                        <option id="45" value="120" data-min="3000">Омск</option>
+                        <option id="46" value="120" data-min="1200">Олекминск</option>
+                        <option id="47" value="230" data-min="4600">П. Камчатский</option>
+                        <option id="48" value="100" data-min="2500">Пермь</option>
+                        <option id="49" value="110" data-min="1100">Полярный</option>
+                        <option id="50" value="80" data-min="1875">Ростов на Дону</option>
+                        <option id="51" value="75" data-min="1625">С. Петербург</option>
+                        <option id="52" value="80" data-min="1750">Самара</option>
+                        <option id="53" value="130" data-min="2750">Сургут</option>
+                        <option id="54" value="75" data-min="1625">Симферополь</option>
+                        <option id="55" value="95" data-min="2000">Сыктывкар</option>
+                        <option id="56" value="80" data-min="800">Таксимо</option>
+                        <option id="57" value="210" data-min="1600">Талакан</option>
+                        <option id="58" value="75" data-min="2250">Томск</option>
+                        <option id="59" value="115" data-min="2250">Тюмень</option>
+                        <option id="60" value="35" data-min="300">Улан-Удэ</option>
+                        <option id="61" value="100" data-min="1000">Усть-Кут</option>
+                        <option id="62" value="95" data-min="2125">Уфа</option>
+                        <option id="63" value="85" data-min="1875">Сочи</option>
+                        <option id="64" value="95" data-min="1875">Челябинск</option>
+                        <option id="65" value="55" data-min="550">Чита</option>
+                        <option id="66" value="145" data-min="1450">Чита-Чара</option>
+                        <option id="67" value="70" data-min="750">Хабаровск</option>
+                        <option id="68" value="110" data-min="2750">Ханты-Мансийск</option>
+                        <option id="69" value="165" data-min="3375">Ю. Сахалинск</option>
+                        <option id="70" value="150" data-min="115">Якутск</option>
+                    </select>
+                </div>
+                <div class="calculation-item-block weight-b input">
+                    <label>Вес </label>
+                    <div class="holder-input">
+                        <input name="calculationWeight" value="1" id="weight" type="text" class="weight">
+                    </div>
+                </div>
+            </div>
+            <div class="calculation-item">
+                <div class="calculation-item-block volume-b input">
+                    <label>Объём </label>
+                    <div class="holder-input">
+                        <input name="calculationVolume" value="" id="volume" type="text" class="volume">
+                    </div>
+                </div>
+                <div class="calculation-item-block">
+                    <label>Характер груза</label>
+                    <select name="character" class="character">
+                        <option value="0">Не выбран</option>
+                        <option value="1">Запчасти</option>
+                        <option value="2">Оборудование</option>
+                        <option value="3">Цветы</option>
+                        <option value="4">Опасный груз</option>
+                        <option value="5">Продукты питания</option>
+                        <option value="6">Товары народного потребления</option>
+                        <option value="7">Одежда</option>
+                    </select>
+                </div>
+                <div class="calculation-item-block heavy-weight-b input">
+                    <label>Тяжеловесный груз </label>
+                    <div class="holder-input">
+                        <input name="calculationHeavyWeight" value="" id="heavyWeight" type="text" class="heavy-weight">
+                    </div>
+                </div>
+            </div>
+            <div class="calculation-item">
+                <div class="calculation-item-block">
+                    <label>Экспедирование груза</label>
+                    <select name="delivery" class="city-search delivery" id="delivery">
+                        <option value="0">Не выбрано</option>
+                        <option value="500">Иркутск</option>
+                        <option value="1000">Бодайбо</option>
+                        <option value="500">Ленск</option>
+                        <option value="1000">Якутск</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calculation-result">
+                <div class="result">
+                    <span class="number"><strong class="calculation-length sum" id="result">0 рублей</strong></span>
+                </div>
+<!--                <input onclick="calculate();" value="Рассчитать стоимость заказа" style="visibility: visible; animation-name: zoomIn;" id="price" class="" type="submit">-->
+                <input value="Рассчитать стоимость заказа" style="visibility: visible; animation-name: zoomIn;" id="price" class="" type="submit">
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
