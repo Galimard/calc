@@ -23,7 +23,7 @@
                 </div>
                 <div class="calculation-item-block">
                     <label>Куда</label>
-                    <select id="v" class="city-search ui-autocomplete-input city-to-go">
+                    <select id="v" name="cityToGo" class="city-search ui-autocomplete-input city-to-go js-field">
                         <option id="1" value="120" data-min="2400">Абакан</option>
                         <option id="2" value="85"  data-min="2125">Анапа</option>
                         <option id="3" value="85" data-min="2125">Астрахань</option>
@@ -99,7 +99,7 @@
                 <div class="calculation-item-block weight-b input">
                     <label>Вес </label>
                     <div class="holder-input">
-                        <input name="calculationWeight" value="1" id="weight" type="text" class="weight">
+                        <input name="calculationWeight" value="1" id="weight" type="text" class="weight js-field">
                     </div>
                 </div>
             </div>
@@ -107,12 +107,12 @@
                 <div class="calculation-item-block volume-b input">
                     <label>Объём </label>
                     <div class="holder-input">
-                        <input name="calculationVolume" value="" id="volume" type="text" class="volume">
+                        <input name="calculationVolume" value="" id="volume" type="text" class="volume js-field">
                     </div>
                 </div>
                 <div class="calculation-item-block">
                     <label>Характер груза</label>
-                    <select name="character" class="character">
+                    <select name="character" class="character js-field">
                         <option value="0">Не выбран</option>
                         <option value="1">Запчасти</option>
                         <option value="2">Оборудование</option>
@@ -126,14 +126,14 @@
                 <div class="calculation-item-block heavy-weight-b input">
                     <label>Тяжеловесный груз </label>
                     <div class="holder-input">
-                        <input name="calculationHeavyWeight" value="" id="heavyWeight" type="text" class="heavy-weight">
+                        <input name="calculationHeavyWeight" value="" id="heavyWeight" type="text" class="heavy-weight js-field">
                     </div>
                 </div>
             </div>
             <div class="calculation-item">
                 <div class="calculation-item-block">
                     <label>Экспедирование груза</label>
-                    <select name="delivery" class="city-search delivery" id="delivery">
+                    <select name="delivery" class="city-search delivery js-field" id="delivery">
                         <option value="0">Не выбрано</option>
                         <option value="500">Иркутск</option>
                         <option value="1000">Бодайбо</option>
