@@ -1,6 +1,7 @@
 class Calculator {
     constructor() {
         this.form = $('.calculation');
+        this.button = $('#price');
         this.cityToGoTarif = 0;
         this.cityToGo = '';
         this.weight = 0,
@@ -15,6 +16,23 @@ class Calculator {
         this.heavySum = 0,
         this.mass = 0,
         this.sum = 0;
+
+        this.initEvents();
+    }
+
+    initEvents() {
+        //инициализация при вводе
+        $('.js-field').each(function() {
+            $(this).on('change', function () {
+                calculator.clickButton();
+            });
+        });
+
+        //инициализация по клику (у тебя в "on" вызывается анонимная функция, в ней this не является текущим объектом класса, а является объектом на который вызывается "on")
+        // this.button.on('click', function (e) {
+        //     e.preventDefault();
+        //     calculator.clickButton();
+        // });
     }
 
     //инициализация функций по клику
@@ -41,16 +59,16 @@ class Calculator {
     //получаем значения с числовых значений формы
     getValue() {
         let array = [];
-        $('.js-field').map(function() {
+        $('.js-field').each(function() {
             array.push(this.value);
         });
 
         return this.cityToGoTarif = array[0],
-        this.weight = array[1],
-        this.volume = array[2],
-        this.character = array[3],
-        this.heavyWeight = array[4],
-        this.delivery = array[5];
+                this.weight = array[1],
+                this.volume = array[2],
+                this.character = array[3],
+                this.heavyWeight = array[4],
+                this.delivery = array[5];
     }
 
     //получаем текстовое значение формы
@@ -163,12 +181,12 @@ class Calculator {
 
 const calculator = new Calculator();
 
-$(document).ready(function () {
-    $('#price').on('click', function (e) {
-        e.preventDefault();
-        calculator.clickButton();
-    });
-});
+// $(document).ready(function () {
+//     $('#price').on('click', function (e) {
+//         e.preventDefault();
+//         calculator.clickButton();
+//     });
+// });
 
 
 // function calculate() {
@@ -295,3 +313,4 @@ $(document).ready(function () {
 //         input.value = value;
 //     }
 // }
+
